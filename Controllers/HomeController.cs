@@ -11,27 +11,58 @@ namespace SiMPAC.Controllers
 {
     public class HomeController : Controller
     {
-        private readonly ILogger<HomeController> _logger;
-
-        public HomeController(ILogger<HomeController> logger)
-        {
-            _logger = logger;
-        }
-
-        public IActionResult Index()
+        public ActionResult Index()
         {
             return View();
         }
 
-        public IActionResult Privacy()
+        public ActionResult About()
         {
             return View();
         }
 
-        [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
-        public IActionResult Error()
+        public ActionResult Privacy()
         {
-            return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
+            return View();
         }
+
+
+        public ActionResult Login()
+        {
+            return View("Login");
+        }
+
+        public ActionResult Register()
+        {
+            return View();
+        }
+
+        public IActionResult Pantry()
+        {
+
+            return View("Pantry");
+        }
+
+        public IActionResult WeekPlan()
+        {
+            ViewData["Message"] = "Your application description page.";
+
+            return View("WeekPlan");
+        }
+
+        public IActionResult Cookbook()
+        {
+            ViewData["Message"] = "Your application description page.";
+
+            return View("Cookbook");
+        }
+
+        public IActionResult ShoppingList()
+        {
+            ViewData["Message"] = "Your application description page.";
+
+            return View("ShoppingList");
+        }
+
     }
 }

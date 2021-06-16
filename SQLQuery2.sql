@@ -1,0 +1,1 @@
+﻿insert into dbo.Utilizador values (1, 'joaoprp@', 'pass', 'joao', '2008-2-02', 150, 1, 1, 0, 1, 1)
